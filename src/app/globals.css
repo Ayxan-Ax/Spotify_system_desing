@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root,
 [data-theme="dark"] {
   --bg-base: #09090b;
@@ -39,4 +40,16 @@
   --accent-primary: #39ff14;
   --accent-hover: #7fff00;
   --border-subtle: rgba(255, 255, 255, 0.45);
+}
+@theme inline {
+  --color-spotify-base: var(--bg-base);
+  --color-spotify-surface: var(--bg-surface);
+  --color-spotify-elevated: var(--bg-elevated);
+  --color-spotify-highlight: var(--bg-highlight);
+  --color-spotify-accent: var(--accent-primary);
+  --color-spotify-accent-hover: var(--accent-hover);
+  --color-content-primary: var(--text-primary);
+  --color-content-secondary: var(--text-secondary);
+  --color-content-muted: var(--text-muted);
+  --color-border-subtle: var(--border-subtle);
 }

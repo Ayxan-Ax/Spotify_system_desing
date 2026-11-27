@@ -31,7 +31,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("dark");
   const [accent, setAccent] = useState<AccentOption>(ACCENT_COLORS[0]);
 
-  // İlk açılışda yaddaşdakı seçimi oxu
   useEffect(() => {
     const savedTheme = localStorage.getItem("spotify-ds-theme") as Theme | null;
     const savedAccentName = localStorage.getItem("spotify-ds-accent");
@@ -47,13 +46,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     });
   }, []);
 
-  // Tema dəyişəndə <html> atributunu və localStorage-i yenilə
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("spotify-ds-theme", theme);
   }, [theme]);
 
-  // Aksent rəngi dəyişəndə CSS dəyişənlərini birbaşa yenilə
   useEffect(() => {
     document.documentElement.style.setProperty("--accent-primary", accent.primary);
     document.documentElement.style.setProperty("--accent-hover", accent.hover);

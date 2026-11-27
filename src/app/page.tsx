@@ -10,6 +10,7 @@ import { DashboardLayout } from "@/components/spotify/DashboardLayout";
 import { Sidebar } from "@/components/spotify/Sidebar";
 import { AudioPlayer } from "@/components/spotify/AudioPlayer";
 import { MOCK_PLAYLISTS, MOCK_TRACKS, Track } from "@/data/mockData";
+import { ThemeSwitcher } from "@/components/ui/ThemeSwitcher";
 
 export default function Home() {
   const [tracks, setTracks] = useState<Track[]>(MOCK_TRACKS);
@@ -109,6 +110,7 @@ export default function Home() {
         <div className="space-y-8 pb-6">
           {/* Üst Axtarış Paneli */}
           <header className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <ThemeSwitcher></ThemeSwitcher>
             <div className="w-full sm:max-w-md">
               <Input
                 isSearch
