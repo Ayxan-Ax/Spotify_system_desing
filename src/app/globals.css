@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root,
+[data-theme="dark"] {
+  --bg-base: #09090b;
+  --bg-surface: #121214;
+  --bg-elevated: #18181b;
+  --bg-highlight: #27272a;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --accent-primary: #1db954;
+  --accent-hover: #1ed760;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="light"] {
+  --bg-base: #f4f4f5;
+  --bg-surface: #ffffff;
+  --bg-elevated: #f8fafc;
+  --bg-highlight: #e4e4e7;
+  --text-primary: #09090b;
+  --text-secondary: #52525b;
+  --text-muted: #71717a;
+  --accent-primary: #16a34a;
+  --accent-hover: #15803d;
+  --border-subtle: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="high-contrast"] {
+  --bg-base: #000000;
+  --bg-surface: #000000;
+  --bg-elevated: #0a0a0a;
+  --bg-highlight: #1f1f1f;
+  --text-primary: #ffffff;
+  --text-secondary: #f4f4f5;
+  --text-muted: #d4d4d8;
+  --accent-primary: #39ff14;
+  --accent-hover: #7fff00;
+  --border-subtle: rgba(255, 255, 255, 0.45);
+}
